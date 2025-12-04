@@ -19,20 +19,25 @@ html(lang='en')
             .container.px-5.my-5
                 .text-center.mb-5
                     h2.display-5.fw-bolder
-                        span.text-gradient.d-inline About Me
-                
+                        span.text-gradient.d-inline(data-i18n="pageTitle") About Me
+
                 .row.gx-5.justify-content-center
                     .col-lg-11.col-xl-9.col-xxl-8
-                        
+
                         // About Me Card
                         .card.shadow.border-0.rounded-4.mb-5
                             .card-body.p-5
 
-                                p.lead.fw-light.mb-4 I've always looked for ways to make work easier and eliminate repetition. When I understand something well, sharing it feels natural.
-                                p.lead.fw-light.mb-0 Years working abroad and collaborating with international teams - across large corporations and small organizations - shaped how I think.
-                                p.lead.fw-light.mb-4 My technical background adds another layer: I understand both the business side and how things actually work under the hood.
-                                p.lead.fw-light.mb-4 Creating my first Udemy course revealed how much I enjoyed this work. I continued with more courses and technical webinars for AI master's program at WSKZ.
-                                p.lead.fw-light.mb-0 My approach: grasp the underlying principles, not just the surface-level how-to. Be someone who can judge what makes sense, not just execute what's trending. That's how you make smart AI decisions for your specific situation.
+                                p.lead.fw-light.mb-4(data-i18n="aboutParagraph1") I've always looked for ways to make work easier and eliminate repetition. When I understand something well, sharing it feels natural.
+                                p.lead.fw-light.mb-0(data-i18n="aboutParagraph2") Years working abroad and collaborating with international teams - across large corporations and small organizations - shaped how I think.
+                                p.lead.fw-light.mb-4(data-i18n="aboutParagraph3") My technical background adds another layer: I understand both the business side and how things actually work under the hood.
+                                p.lead.fw-light.mb-4(data-i18n="aboutParagraph4") Creating my first Udemy course revealed how much I enjoyed this work. I continued with more courses and technical webinars for AI master's program at WSKZ.
+                                p.lead.fw-light.mb-0(data-i18n="aboutParagraph5") My approach: grasp the underlying principles, not just the surface-level how-to. Be someone who can judge what makes sense, not just execute what's trending. That's how you make smart AI decisions for your specific situation.
+
+
+                        // Divider
+                        .pb-5
+
 
                         // Current Focus Card
                         .card.shadow.border-0.rounded-4.mb-5
@@ -40,31 +45,29 @@ html(lang='en')
                                 .d-flex.align-items-center.mb-4
                                     .feature.bg-primary.bg-gradient-primary-to-secondary.text-white.rounded-3.me-3
                                         i.bi.bi-lightning-fill
-                                    h3.fw-bolder.mb-0 Current Focus
-
-                                .row.row-cols-1.row-cols-md-2.g-4
+                                    h3.fw-bolder.mb-0
+                                        span.text-gradient.d-inline(data-i18n="currentFocusTitle") Locked in on
+                                .row.row-cols-1.g-4
                                     .col
-                                        .d-flex.align-items-start.bg-light.rounded-4.p-4.h-100
-                                            .feature.bg-primary.bg-gradient-primary-to-secondary.text-white.rounded-3.me-3
-                                                i.bi.bi-rocket-takeoff
-                                            div
-                                                h5.fw-bold.mb-2 HRTech Startup
-                                                p.mb-0 Building innovative solutions for modern human resources challenges
-                                    .col
-                                        .d-flex.align-items-start.bg-light.rounded-4.p-4.h-100
-                                            .feature.bg-primary.bg-gradient-primary-to-secondary.text-white.rounded-3.me-3
-                                                i.bi.bi-mortarboard
-                                            div
-                                                h5.fw-bold.mb-2 AI Educator
-                                                p.mb-0 Training professionals through webinars, Udemy courses, and direct consulting with businesses
+                                        .bg-light.rounded-4.p-4
+                                            h5.text-primary.mb-3(data-i18n="focusArea1Title") AI Training & Enablement
+                                            p.lead.fw-light.mb-0(data-i18n="focusArea1Description") I run team and individual workshops for companies and individuals - from AI introduction to practical applications in daily work. I teach not just tools, but most importantly how to think about AI in a business context.
 
-                        // Divider
-                        .pb-5
+                                    .col
+                                        .bg-light.rounded-4.p-4
+                                            h5.text-primary.mb-3(data-i18n="focusArea2Title") Fractional Operations & Project Support
+                                            p.lead.fw-light.mb-0(data-i18n="focusArea2Description") I support companies in operationalizing AI - helping move from knowledge to implementation, coordinating projects, connecting technical teams with business goals.
+
+                                    .col
+                                        .bg-light.rounded-4.p-4
+                                            h5.text-primary.mb-3(data-i18n="focusArea3Title") HRTech Startup Co-founder
+                                            p.lead.fw-light.mb-0(data-i18n="focusArea3Description") I'm co-building an HRTech startup - wearing PM, AI Engineer, and Sales hats. Practically testing everything I teach.
+
 
                         // Connect Card
                         .card.shadow.border-0.rounded-4.mb-5
                             .card-body.p-5.text-center
-                                p.lead.fw-light.mb-4 Interested in working together or learning more?
+                                p.lead.fw-light.mb-4(data-i18n="connectText") Interested in working together or learning more?
                                 .d-flex.justify-content-center.gap-4.fs-2.mb-4
                                     a.text-gradient(href='https://linkedin.com/in/alibinkowska', target='_blank', title='LinkedIn')
                                         i.bi.bi-linkedin
@@ -72,7 +75,44 @@ html(lang='en')
                                         i.bi.bi-twitter
                                     a.text-gradient(href='https://medium.com/@alibinkowska', target='_blank', title='Medium')
                                         i.bi.bi-medium
-                                a.btn.btn-primary.btn-lg.px-5.py-3(href='contact.html') Get In Touch
+                                a.btn.btn-primary.btn-lg.px-5.py-3(href='contact.html', data-i18n="getInTouchBtn") Get In Touch
 
         include includes/footer.pug
+
+        //- Inline translations - works in ALL browsers
+        script.
+          window.commonTranslations = {
+            pl: {
+              home: "Strona główna",
+              about: "O mnie",
+              contact: "Kontakt",
+              offer: "Oferta",
+              copyright: "© 2025 Nexi8",
+              privacyPolicy: "Polityka prywatności"
+            }
+          };
+
+          window.aboutTranslations = {
+            pl: {
+              pageTitle: "O mnie",
+              aboutParagraph1: "Zawsze szukałam sposobów, by ułatwić sobie pracę i wyeliminować powtarzalność. Kiedy coś dobrze rozumiem, dzielenie się tym przychodzi naturalnie.",
+              aboutParagraph2: "Lata pracy za granicą i współpracy z międzynarodowymi zespołami - zarówno w dużych korporacjach, jak i małych organizacjach - ukształtowały sposób, w jaki myślę.",
+              aboutParagraph3: "Moje techniczne zaplecze dodaje kolejną warstwę: rozumiem zarówno stronę biznesową, jak i to, jak rzeczy faktycznie działają pod maską.",
+              aboutParagraph4: "Tworzenie mojego pierwszego kursu na Udemy pokazało mi, jak bardzo lubię tę pracę. Kontynuowałam kolejnymi kursami oraz webinarami technicznymi dla programu magisterskiego AI w WSKZ.",
+              aboutParagraph5: "Moje podejście: zrozumieć podstawowe zasady, nie tylko powierzchowne 'jak to zrobić'. Być kimś, kto potrafi ocenić, co ma sens, nie tylko wykonać to, co jest na topie. Tak właśnie podejmujesz mądre decyzje dotyczące AI w Twojej konkretnej sytuacji.",
+              currentFocusTitle: "Co teraz robię",
+              focusArea1Title: "AI Training & Enablement",
+              focusArea1Description: "Prowadzę warsztaty zespołowe i indywidualne, dla firm i osób prywatnych - od wprowadzenia do AI po praktyczne zastosowania w codziennej pracy. Uczę nie tylko narzędzi, ale przede wszystkim tego jak myśleć o AI w kontekście biznesowym.",
+              focusArea2Title: "Fractional Operations & Project Support",
+              focusArea2Description: "Wspieram firmy w operacjonalizacji AI - pomagam przejść od wiedzy do wdrożenia, koordynuję projekty, łączę zespoły techniczne z biznesowymi celami.",
+              focusArea3Title: "HRTech Startup Co-founder",
+              focusArea3Description: "Współtworzę startup w obszarze HRTech - pełnię role PM, AI Engineer i Sales. Praktycznie testuję wszystko czego uczę.",
+              connectText: "Zainteresowałam Cię współpracą lub chcesz dowiedzieć się więcej?",
+              getInTouchBtn: "Skontaktuj się"
+            }
+          };
+
+        //- App logic
+        script(src='js/app.js')
+
         include includes/scripts.pug

@@ -2,8 +2,13 @@ footer.bg-white.py-4.mt-auto
     .container.px-5
         .row.align-items-center.justify-content-between.flex-column.flex-sm-row
             .col-auto
-                .small.m-0 Copyright &copy; alibinkowska.co 2025
+                .small.m-0 Copyright &copy; 2025 Nexi8
             .col-auto
-                a.small(href='polityka-prywatnosci.pug') Polityka prywatności
+                a.small(href='polityka-prywatnosci.html' data-i18n='privacyPolicy') Privacy policy
                 span.mx-1 &middot;
-                a.small(href='#!') Contact
+                a.small(href='contact.html' data-i18n='contact') Contact
+                span.mx-2 &middot;
+                //- Language switcher inline with links
+                .language-switcher.d-inline-flex
+                    button(onclick="setLanguage('en')" data-lang="en") 🇬🇧 EN
+                    button(onclick="setLanguage('pl')" data-lang="pl") 🇵🇱 PL

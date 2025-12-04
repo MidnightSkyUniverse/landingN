@@ -13,6 +13,7 @@ html(lang='en')
 
     body.d-flex.flex-column.h-100
         main.flex-shrink-0
+
             include includes/navbar.pug
 
             // Header
@@ -22,13 +23,13 @@ html(lang='en')
                         .col-xxl-5
                             .text-center.text-xxl-start
                                 .badge.bg-gradient-primary-to-secondary.text-white.mb-4
-                                    .text-uppercase AI Training &middot; HRTech &middot; Startups
-                                .fs-3.fw-light.text-muted I help businesses and professionals
+                                    .text-uppercase(data-i18n="heroBadge") AI Educator &middot; Product Manager &middot; HRTech
+                                .fs-3.fw-light.text-muted(data-i18n="heroSubtitle") I collaborate with businesses and individuals
                                 h1.display-3.fw-bolder.mb-5
-                                    span.text-gradient.d-inline Work smarter with AI
+                                    span.text-gradient.d-inline(data-i18n="heroTitle") Work smarter with AI
                                 .d-grid.gap-3.d-sm-flex.justify-content-sm-center.justify-content-xxl-start.mb-3
-                                    a.btn.btn-primary.btn-lg.px-5.py-3.me-sm-3.fs-6.fw-bolder(href='about.html') About Me
-                                    a.btn.btn-outline-dark.btn-lg.px-5.py-3.fs-6.fw-bolder(href='offer.html') Offer
+                                    a.btn.btn-primary.btn-lg.px-5.py-3.me-sm-3.fs-6.fw-bolder(href='about.html', data-i18n="aboutMeBtn") About me
+                                    a.btn.btn-outline-dark.btn-lg.px-5.py-3.fs-6.fw-bolder(href='offer.html', data-i18n="offerBtn") Offer
                         .col-xxl-7
                             .d-flex.justify-content-center.mt-5.mt-xxl-0
                                 .profile.bg-gradient-primary-to-secondary
@@ -50,9 +51,10 @@ html(lang='en')
                     .row.gx-5.justify-content-center
                         .col-xxl-8
                             .text-center
-                                h2.display-4.fw-bolder.mb-4 How I Work
-                                p.lead.mb-4 I don't just teach AI tools - I guide you on what's important to know about AI so you can run your business efficiently and effectively in this dynamic world.
-                                p.lead.mb-5 No fluff, no hype. Just practical AI knowledge that helps you make smart decisions for your company.
+                                h2.display-4.fw-bolder.mb-4(data-i18n="howIWorkTitle") How I Work
+                                p.lead.mb-4(data-i18n="howIWorkParagraph1") I don't just teach AI tools - I help you understand what actually matters so you can make smart decisions for your business.
+                                p.lead.mb-5(data-i18n="howIWorkParagraph2") Whether through training your team or working alongside you to operationalize AI - no fluff, no hype, just practical knowledge that works.
+
                                 .d-flex.justify-content-center.fs-2.gap-4
                                     a.text-white(href="https://linkedin.com/in/alibinkowska")
                                         i.bi.bi-linkedin
@@ -62,5 +64,37 @@ html(lang='en')
                                         i.bi.bi-medium
 
 
-        include includes/footer.pug
-        include includes/scripts.pug
+
+            include includes/footer.pug
+
+            //- Inline translations - works in ALL browsers
+            script.
+              window.commonTranslations = {
+                pl: {
+                  home: "Strona główna",
+                  about: "O mnie",
+                  contact: "Kontakt",
+                  offer: "Oferta",
+                  copyright: "© 2025 Nexi8",
+                  privacyPolicy: "Polityka prywatności"
+                }
+              };
+
+              window.homeTranslations = {
+                pl: {
+                  heroBadge: "Trener AI · Product Manager · HRTech",
+                  heroSubtitle: "Współpracuję z firmami i osobami prywatnymi.",
+                  heroTitle: "Pracuj mądrze z AI",
+                  aboutMeBtn: "O mnie",
+                  offerBtn: "Oferta",
+                  howIWorkTitle: "Jak działam",
+                  howIWorkParagraph1: "Jestem entuzjastą mądrego wykorzystania AI w codziennej pracy. Chcę Ci pokazać jak współpracować z AI.",
+                  howIWorkParagraph2: "Bez pustych haseł, bez szumu medialnego, tylko praktyczna wiedza, która działa."
+                }
+              };
+
+            //- App logic
+            script(src='js/app.js')
+
+            //- Bootstrap and other scripts
+            include includes/scripts.pug

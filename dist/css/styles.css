@@ -11735,6 +11735,8 @@ html {
 .workshop-list {
   list-style: none;
   padding-left: 0;
+  font-size: 1.25rem;
+  font-weight: 200;
 }
 .workshop-list li {
   padding: 8px 0;
@@ -11745,7 +11747,7 @@ html {
   content: "•";
   position: absolute;
   left: 0;
-  color: #f7941d;
+  color: #FF9100;
   font-weight: bold;
   font-size: 1.2em;
 }
@@ -11753,4 +11755,40 @@ html {
 .card .bg-light.h-100 {
   display: flex;
   flex-direction: column;
+}
+
+.tool-item {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* Language Switcher Styles - Footer Inline */
+.language-switcher {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.language-switcher button {
+  padding: 0.2rem 0.5rem;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6c757d;
+  transition: all 0.2s ease;
+}
+.language-switcher button:hover {
+  color: var(--bs-secondary, #6c757d);
+  border-color: var(--bs-secondary, #6c757d);
+}
+.language-switcher button.active {
+  color: var(--bs-secondary, #6c757d);
+  border-color: var(--bs-secondary, #6c757d);
+  font-weight: 600;
+}
+.language-switcher button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(108, 117, 125, 0.25);
 }

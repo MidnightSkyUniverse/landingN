@@ -1,0 +1,34 @@
+/* Language Switcher Styles - Footer Inline */
+.language-switcher {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  button {
+    padding: 0.2rem 0.5rem;
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #6c757d;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: var(--bs-secondary, #6c757d);
+      border-color: var(--bs-secondary, #6c757d);
+    }
+
+    &.active {
+      color: var(--bs-secondary, #6c757d);
+      border-color: var(--bs-secondary, #6c757d);
+      font-weight: 600;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(108, 117, 125, 0.25);
+    }
+  }
+}
