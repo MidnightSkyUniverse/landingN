@@ -115,3 +115,8 @@ if (window.offerTranslations && window.offerTranslations.pl) {
 if (window.privacyTranslations && window.privacyTranslations.pl) {
   Object.assign(translations.pl, window.privacyTranslations.pl);
 }
+
+// Merge contactTranslations (if exists)
+if (window.contactTranslations && window.contactTranslations.pl) {
+  Object.assign(translations.pl, window.contactTranslations.pl);
+}

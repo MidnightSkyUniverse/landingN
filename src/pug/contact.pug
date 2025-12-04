@@ -5,17 +5,17 @@ html(lang='en')
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content)
-        meta(name='author', content)
+        meta(name='description', content='Contact Ali Bińkowska')
+        meta(name='author', content='Ali Bińkowska')
 
-        title Modern Business - Start Bootstrap Template
+        title Contact - Ali Bińkowska
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
 
         include includes/css.pug
 
-    body.d-flex.flex-column
+    body.d-flex.flex-column.h-100.bg-white
 
         main.flex-shrink-0
 
@@ -25,106 +25,68 @@ html(lang='en')
             // Page content
             section.py-5
 
-                .container.px-5
+                .container.px-5.my-5
 
-                    // Contact form
-                    .bg-light.rounded-4.py-5.px-4.px-md-5
-                        .text-center.mb-5
-                            .feature.bg-primary.bg-gradient-primary-to-secondary.text-white.rounded-3.mb-3
-                                i.bi.bi-envelope
-                            h1.fw-bolder Get in touch
-                            p.lead.fw-normal.text-muted.mb-0 [form under construction! please use social media to get in touch]
-                        .row.gx-5.justify-content-center
-                            .col-lg-8.col-xl-6
+                    .text-center.mb-5
+                        h1.display-5.fw-bolder
+                            span.text-gradient.d-inline(data-i18n="pageTitle") Get in touch
 
-                                // * * * * * * * * * * * * * * *
-                                // * * SB Forms Contact Form * *
-                                // * * * * * * * * * * * * * * *
+                    .row.gx-5.justify-content-center
+                        .col-lg-8.col-xl-6
 
-                                // This form is pre-integrated with SB Forms.
-                                // To make this form functional, sign up at
-                                // https://startbootstrap.com/solution/contact-forms
-                                // to get an API token!
+                            // Contact Card
+                            .card.shadow.border-0.rounded-4.mb-5
+                                .card-body.p-5.text-center
 
-                                form#contactForm(data-sb-form-api-token='API_TOKEN')
+                                    // Email Section
+                                    .mb-5
+                                        h3.fw-bolder.mb-3(data-i18n="emailLabel") Email
+                                        p.lead.mb-0(data-i18n="email")  contact @ alibinkowska.co
 
-                                    // Name input
-                                    .form-floating.mb-3
-                                        input#name.form-control(
-                                            type='text',
-                                            placeholder='Enter your name...'
-                                            data-sb-validations='required'
-                                        )
-                                        label(for='name') Full name
-                                        .invalid-feedback(data-sb-feedback='name:required')
-                                            | A name is required.
-                                    
-                                    // Email address input
-                                    .form-floating.mb-3
-                                        input#email.form-control(
-                                            type='email',
-                                            placeholder='name@example.com'
-                                            data-sb-validations='required,email'
-                                        )
-                                        label(for='email') Email address
-                                        .invalid-feedback(data-sb-feedback='email:required')
-                                            | An email is required.
-                                        .invalid-feedback(data-sb-feedback='email:email')
-                                            | Email is not valid.
-                                    
-                                    // Phone number input
-                                    .form-floating.mb-3
-                                        input#phone.form-control(
-                                            type='tel',
-                                            placeholder='(123) 456-7890'
-                                            data-sb-validations='required'
-                                        )
-                                        label(for='phone') Phone number
-                                        .invalid-feedback(data-sb-feedback='phone:required')
-                                            | A phone number is required.
-                                    
-                                    // Message input
-                                    .form-floating.mb-3
-                                        textarea#message.form-control(
-                                            type='text',
-                                            placeholder='Enter your message here...',
-                                            style='height: 10rem;'
-                                            data-sb-validations='required'
-                                        )
-                                        label(for='message') Message
-                                        .invalid-feedback(data-sb-feedback='message:required')
-                                            | A message is required.
+                                    // Social Media Section
+                                    .mb-5
+                                        h3.fw-bolder.mb-3(data-i18n="socialLabel") Social Media
+                                        .d-flex.justify-content-center.gap-4.fs-2
+                                            a.text-gradient(href='https://linkedin.com/in/alibinkowska', target='_blank', title='LinkedIn')
+                                                i.bi.bi-linkedin
+                                            a.text-gradient(href='https://x.com/AliBinkowska', target='_blank', title='Twitter/X')
+                                                i.bi.bi-twitter
+                                            a.text-gradient(href='https://medium.com/@alibinkowska', target='_blank', title='Medium')
+                                                i.bi.bi-medium
 
-                                    // Submit success message
-                                    //
-                                    // This is what your users will see when the form
-                                    // has successfully submitted
-                                    #submitSuccessMessage.d-none
-                                        .text-center.mb-3
-                                            .fw-bolder Form submission successful!
-                                            | To activate this form, sign up at
-                                            br
-                                            a(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
+                                    // Company Details Section
+                                    .pt-4.border-top
+                                        h5.mb-3(data-i18n="companyLabel") Company Details
+                                        p.mb-1 Nexi8 Ali Bińkowska
 
-                                    // Submit error message
-                                    //
-                                    // This is what your users will see when there is
-                                    // an error submitting the form
-                                    #submitErrorMessage.d-none
-                                        .text-center.text-danger.mb-3 Error sending message!
-
-                                    // Submit Button
-                                    .d-grid
-                                        button#submitButton.btn.btn-primary.btn-lg.disabled(type='submit') Submit
 
         // Footer
         include includes/footer.pug
 
+        //- Inline translations
+        script.
+          window.commonTranslations = {
+            pl: {
+              home: "Strona główna",
+              about: "O mnie",
+              contact: "Kontakt",
+              offer: "Oferta",
+              copyright: "© 2025 Nexi8",
+              privacyPolicy: "Polityka prywatności"
+            }
+          };
+
+          window.contactTranslations = {
+            pl: {
+              pageTitle: "Kontakt",
+              emailLabel: "Email",
+              email: "kontakt @ alibinkowska.co",
+              socialLabel: "Social Media",
+              companyLabel: "Dane firmy"
+            }
+          };
+
+        //- App logic
+        script(src='js/app.js')
+
         include includes/scripts.pug
-
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        // * *                               SB Forms JS                               * *
-        // * * Activate your form at https://startbootstrap.com/solution/contact-forms * *
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-
-        script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
