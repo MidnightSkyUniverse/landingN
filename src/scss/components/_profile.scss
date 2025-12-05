@@ -6,16 +6,17 @@
     width: 75vw;
     border-radius: 5vw;
     margin-top: 5vw;
-    max-height: 40rem;
-    max-width: 40rem;
+    max-height: 37.5rem;  // Change from 40rem to 33.5rem (670px)
+    max-width: 37.5rem;   // Change from 40rem to 33.5rem (670px)
 
     .profile-img {
         height: 80vw;
-        max-height: 45rem;
+        max-height: 39.5rem;
         position: absolute;
-        bottom: 0;
+        bottom: 0.5%; //0
         left: 50%;
         transform: translateX(-50%);
+        border-radius: 5vw; //added by me
     }
 
     .dots-1 {

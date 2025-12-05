@@ -11584,16 +11584,17 @@ html {
   width: 75vw;
   border-radius: 5vw;
   margin-top: 5vw;
-  max-height: 40rem;
-  max-width: 40rem;
+  max-height: 37.5rem;
+  max-width: 37.5rem;
 }
 .profile .profile-img {
   height: 80vw;
-  max-height: 45rem;
+  max-height: 39.5rem;
   position: absolute;
-  bottom: 0;
+  bottom: 0.5%;
   left: 50%;
   transform: translateX(-50%);
+  border-radius: 5vw;
 }
 .profile .dots-1 {
   position: absolute;
