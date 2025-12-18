@@ -11594,7 +11594,7 @@ html {
   bottom: 0.5%;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 5vw;
+  border-radius: 6vw;
 }
 .profile .dots-1 {
   position: absolute;
@@ -11733,36 +11733,6 @@ html {
     left: -2vw;
   }
 }
-.workshop-list {
-  list-style: none;
-  padding-left: 0;
-  font-size: 1.25rem;
-  font-weight: 200;
-}
-.workshop-list li {
-  padding: 8px 0;
-  padding-left: 1.5em;
-  position: relative;
-}
-.workshop-list li:before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #FF9100;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-.card .bg-light.h-100 {
-  display: flex;
-  flex-direction: column;
-}
-
-.tool-item {
-  font-size: 1.1rem;
-  font-weight: 400;
-}
-
 /* Language Switcher Styles - Footer Inline */
 .language-switcher {
   display: inline-flex;
