@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 * Start Bootstrap - Personal v1.0.1 (https://startbootstrap.com/template-overviews/personal)
-* Copyright 2013-2025 Start Bootstrap
+* Copyright 2013-2026 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-personal/blob/master/LICENSE)
 */
 /*!
@@ -11589,7 +11589,7 @@ html {
 }
 .profile .profile-img {
   height: 80vw;
-  max-height: 39.5rem;
+  max-height: 38.5rem;
   position: absolute;
   bottom: 0.5%;
   left: 50%;
@@ -11635,33 +11635,8 @@ html {
 
 @media (min-width: 576px) {
   .profile {
-    height: 60vw;
-    width: 60vw;
-  }
-  .profile .profile-img {
-    height: 65vw;
-  }
-  .profile .dots-1 {
-    width: 3vw;
-    right: 1.5vw;
-  }
-  .profile .dots-2 {
-    width: 3vw;
-    right: -4vw;
-  }
-  .profile .dots-3 {
-    width: 3vw;
-    left: 1.5vw;
-  }
-  .profile .dots-4 {
-    width: 3vw;
-    left: -4vw;
-  }
-}
-@media (min-width: 768px) {
-  .profile {
-    height: 50vw;
-    width: 50vw;
+    height: 55vw;
+    width: 55vw;
   }
   .profile .profile-img {
     height: 55vw;
@@ -11683,13 +11658,38 @@ html {
     left: -4vw;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .profile {
-    height: 40vw;
-    width: 40vw;
+    height: 45vw;
+    width: 45vw;
   }
   .profile .profile-img {
     height: 45vw;
+  }
+  .profile .dots-1 {
+    width: 3vw;
+    right: 1.5vw;
+  }
+  .profile .dots-2 {
+    width: 3vw;
+    right: -4vw;
+  }
+  .profile .dots-3 {
+    width: 3vw;
+    left: 1.5vw;
+  }
+  .profile .dots-4 {
+    width: 3vw;
+    left: -4vw;
+  }
+}
+@media (min-width: 992px) {
+  .profile {
+    height: 35vw;
+    width: 35vw;
+  }
+  .profile .profile-img {
+    height: 37vw;
   }
   .profile .dots-1 {
     width: 1.5vw;
@@ -11710,11 +11710,11 @@ html {
 }
 @media (min-width: 1200px) {
   .profile {
-    height: 35vw;
-    width: 35vw;
+    height: 30vw;
+    width: 30vw;
   }
   .profile .profile-img {
-    height: 40vw;
+    height: 32vw;
   }
   .profile .dots-1 {
     width: 1.5vw;

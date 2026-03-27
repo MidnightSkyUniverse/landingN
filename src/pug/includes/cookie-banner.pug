@@ -1,0 +1,16 @@
+//- Google Consent Mode default — must run before GA script
+script.
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied'
+  });
+
+//- Google Analytics
+script(async src='https://www.googletagmanager.com/gtag/js?id=G-8THD5Y17KP')
+script.
+  gtag('js', new Date());
+  gtag('config', 'G-8THD5Y17KP');
+
+//- CookieYes banner (handles consent updates automatically)
+script#cookieyes(type='text/javascript' src='https://cdn-cookieyes.com/client_data/e355d47b8ba3ac4aac7b1901/script.js')

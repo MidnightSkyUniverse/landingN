@@ -11,7 +11,7 @@
 
     .profile-img {
         height: 80vw;
-        max-height: 39.5rem;
+        max-height: 38.5rem;
         position: absolute;
         bottom: 0.5%; //0
         left: 50%;
@@ -69,40 +69,9 @@
 
 @include media-breakpoint-up(sm) {
     .profile {
-        height: 60vw;
-        width: 60vw;
-    
-        .profile-img {
-            height: 65vw;
-        }
-    
-        .dots-1 {
-            width: 3vw;
-            right: 1.5vw;
-        }
-    
-        .dots-2 {
-            width: 3vw;
-            right: -4vw;
-        }
-    
-        .dots-3 {
-            width: 3vw;
-            left: 1.5vw;
-        }
-    
-        .dots-4 {
-            width: 3vw;
-            left: -4vw;
-        }
-    
-    }
-}
-@include media-breakpoint-up(md) {
-    .profile {
-        height: 50vw;
-        width: 50vw;
-    
+        height: 55vw;
+        width: 55vw;
+
         .profile-img {
             height: 55vw;
         }
@@ -129,45 +98,76 @@
     
     }
 }
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(md) {
     .profile {
-        height: 40vw;
-        width: 40vw;
-    
+        height: 45vw;
+        width: 45vw;
+
         .profile-img {
             height: 45vw;
         }
     
         .dots-1 {
+            width: 3vw;
+            right: 1.5vw;
+        }
+    
+        .dots-2 {
+            width: 3vw;
+            right: -4vw;
+        }
+    
+        .dots-3 {
+            width: 3vw;
+            left: 1.5vw;
+        }
+    
+        .dots-4 {
+            width: 3vw;
+            left: -4vw;
+        }
+    
+    }
+}
+@include media-breakpoint-up(lg) {
+    .profile {
+        height: 35vw;
+        width: 35vw;
+    
+        .profile-img {
+            height: 37vw;
+        }
+
+        .dots-1 {
             width: 1.5vw;
             right: 0.75vw;
         }
-    
+
         .dots-2 {
             width: 1.5vw;
             right: -2vw;
         }
-    
+
         .dots-3 {
             width: 1.5vw;
             left: 0.75vw;
         }
-    
+
         .dots-4 {
             width: 1.5vw;
             left: -2vw;
         }
-    
+
     }
 }
 
 @include media-breakpoint-up(xl) {
     .profile {
-        height: 35vw;
-        width: 35vw;
+        height: 30vw;
+        width: 30vw;
 
         .profile-img {
-            height: 40vw;
+            height: 32vw;
         }
 
         .dots-1 {
