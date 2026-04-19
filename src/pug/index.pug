@@ -3,22 +3,58 @@ html(lang='en')
     head
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='AI educator and trainer for businesses and individuals. Learn to work smarter with AI through practical workshops and operational implementation.')
-        meta(name='keywords', content='ai educator, trener ai, ai workshop, ai training, warsztaty ai, fractional operations, product manager, hrtech')
+        meta(name='description', content='Ali Bińkowska - solopreneur, product manager, AI trainer and occasional AI engineer. Helping founders with OKRs, metrics and dashboards.')
         meta(name='author', content='Ali Bińkowska')
         link(rel='canonical', href='https://alibinkowska.co/')
 
-        // Open Graph tags for social media sharing
-        meta(property='og:title', content='Ali Bińkowska - AI Educator & Product Manager')
-        meta(property='og:description', content='Work smarter with AI. Practical training and operational implementation for businesses and individuals.')
+        // Open Graph
+        meta(property='og:title', content='Ali Bińkowska')
+        meta(property='og:description', content='Solopreneur, product manager, AI trainer and occasional AI engineer. Helping founders with OKRs, metrics and dashboards.')
         meta(property='og:type', content='website')
         meta(property='og:url', content='https://alibinkowska.co/')
-        meta(property='og:image', content='https://alibinkowska.co/assets/profile.png')
+        meta(property='og:image', content='https://alibinkowska.co/assets/logo_AB.png')
 
-        title Ali Bińkowska - AI Training & HRTech
+        title Ali Bińkowska
+
+        meta(name='keywords', content='Ali Bińkowska, solopreneur, product manager, AI trainer, OKR consultant, metrics, Looker Studio, dashboards, chatbots, OCR, HRTech, startups, Nexi8')
+
+        // JSON-LD Person schema
+        script(type='application/ld+json').
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Ali Bińkowska",
+                "alternateName": "Alina Bińkowska",
+                "url": "https://alibinkowska.co",
+                "image": "https://alibinkowska.co/assets/logo_AB.png",
+                "jobTitle": ["Solopreneur", "Product Manager", "AI Trainer", "AI Engineer"],
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Nexi8",
+                    "url": "https://nexi8.pl"
+                },
+                "memberOf": [
+                    {
+                        "@type": "Organization",
+                        "name": "PAAI",
+                        "url": "https://paai.pl/o-nas"
+                    },
+                    {
+                        "@type": "Organization",
+                        "name": "WSKZ",
+                        "url": "https://studia-online.pl/kadra/0/1417/mgr_alina_binkowska"
+                    }
+                ],
+                "knowsAbout": ["OKR", "Metrics", "Dashboards", "Looker Studio", "AI tools", "Product Management", "Python", "n8n", "Chatbots", "OCR"],
+                "sameAs": [
+                    "https://linkedin.com/in/alibinkowska",
+                    "https://x.com/AliBinkowska",
+                    "https://medium.com/@alibinkowska"
+                ],
+                "inLanguage": ["pl", "en"]
+            }
 
         include includes/cookie-banner.pug
-
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
         include includes/css.pug
 
@@ -27,86 +63,161 @@ html(lang='en')
 
             include includes/navbar.pug
 
-            // Header
-            header.py-5
-                .container.px-5.pb-5
-                    .row.gx-5.align-items-center
-                        .col-xxl-5
-                            .text-center.text-xxl-start.mt-5.pt-5
-                            .text-center.text-xxl-start
-                                .badge.bg-gradient-primary-to-secondary.text-white.mb-4
-                                    .text-uppercase(data-i18n="heroBadge") Startup Builder &middot; AI Educator &middot; HRTech
-                                .fs-3.fw-light.text-muted(data-i18n="heroSubtitle") Building in HRTech | Sharing AI knowledge
-                                h1.display-3.fw-bolder.mb-5
-                                    span.text-gradient.d-inline(data-i18n="heroTitle") Building, learning, sharing
-                                .d-grid.gap-3.d-sm-flex.justify-content-sm-center.justify-content-xxl-start.mb-3
-                                    a.btn.btn-primary.btn-lg.px-5.py-3.me-sm-3.fs-6.fw-bolder(href='about.html', data-i18n="aboutMeBtn") About me
-                                    a.btn.btn-outline-dark.btn-lg.px-5.py-3.fs-6.fw-bolder(href='https://nexi8.pl', target='_blank', data-i18n="nexi8Btn") Nexi8 (PL)
-                        .col-xxl-7
-                            .d-flex.justify-content-center.mt-5.mt-xxl-0
-                                .profile.bg-gradient-primary-to-secondary
-                                    img.profile-img(src='assets/profile.png', alt='Ali Bińkowska')
-                                    .dots-1
-                                        include includes/svg-dots.pug
-                                    .dots-2
-                                        include includes/svg-dots.pug
-                                    .dots-3
-                                        include includes/svg-dots.pug
-                                    .dots-4
-                                        include includes/svg-dots.pug
+            .v2-wrap
 
+                //- Hero
+                h1.v2-name Ali Bińkowska
+                p.v2-belief-text(data-i18n='heroIntro') Hey, this is Ali. Welcome to my page.
+                p.v2-belief-text(data-i18n='heroPara1') For every "no" there is a path to "yes" - I don't take dead ends at face value. I love building new things, especially when technology is the lever. If there's a smarter way to do something, I want to find it.
+                p.v2-belief-text(data-i18n='heroPara2') I thrive in good collaboration and I'm equally comfortable pushing my own goals forward. I've built with public funding - now I'm focused on finding product-market fit for something I fully own.
 
+                //- Roles & activities
+                .v2-section
+                    .v2-section-label(data-i18n='rolesLabel') Roles & activities
 
-            // About Section
-            section.py-5.bg-gradient-primary-to-secondary.text-white
-                .container.px-5.my-5
-                    .row.gx-5.justify-content-center
-                        .col-xxl-8
-                            .text-center
-                                h2.display-4.fw-bolder.mb-4(data-i18n="howIWorkTitle") How I Work
-                                p.lead.mb-4(data-i18n="howIWorkParagraph1") I build things that solve real problems - currently in HRTech - while sharing what I learn about AI through training and workshops.
-                                p.lead.mb-4(data-i18n="howIWorkParagraph2") I believe in understanding principles over chasing trends, in practical implementation over theory, and in being someone who can judge what makes sense for your specific situation.
-                                p.lead.mb-5(data-i18n="howIWorkParagraph3") Open to connections, collaborations, and conversations with fellow builders and founders.
+                    .v2-item
+                        .v2-item-title
+                            span.v2-dash —
+                            span
+                                span(data-i18n='role1Title') Solopreneur | Product Manager
+                                |  &middot;
+                                a(href='https://nexi8.pl' target='_blank') Nexi8
+                        p.v2-item-desc(data-i18n='role1Desc') I help founders and business owners define goals, build metrics, and track what matters - through OKR sprints and Looker Studio dashboards.
 
-                                .d-flex.justify-content-center.fs-2.gap-4
-                                    a.text-white(href="https://linkedin.com/in/alibinkowska")
-                                        i.bi.bi-linkedin
-                                    a.text-white(href="https://x.com/AliBinkowska")
-                                        i.bi.bi-twitter
-                                    a.text-white(href="https://medium.com/@alibinkowska")
-                                        i.bi.bi-medium
+                    .v2-item
+                        .v2-item-title
+                            span.v2-dash —
+                            span(data-i18n='role2Title') Occasional AI Engineer
+                        p.v2-item-desc(data-i18n='role2Desc') I work on optimisation projects with a focus on OCR, bots, and chatbots - building tools that extract, process, and automate.
 
+                    .v2-item
+                        .v2-item-title
+                            span.v2-dash —
+                            span
+                                span(data-i18n='role3Title') AI Trainer
+                                |  &middot;
+                                a(href='https://paai.pl/o-nas' target='_blank') PAAI
+                        p.v2-item-desc(data-i18n='role3Desc') I run AI training sessions helping teams and individuals work smarter with AI tools.
 
+                    .v2-item
+                        .v2-item-title
+                            span.v2-dash —
+                            span
+                                span(data-i18n='role4Title') Guest Lecturer
+                                |  &middot;
+                                a(href='https://studia-online.pl/kadra/0/1417/mgr_alina_binkowska' target='_blank') WSKZ
+                        p.v2-item-desc(data-i18n='role4Desc') Occasional guest lectures on AI, product thinking, and building in the modern tech landscape.
 
-            include includes/footer.pug
+                //- Stack & tools
+                .v2-section
+                    .v2-section-label(data-i18n='stackLabel') Stack & tools
+                    .v2-tags
+                        span.v2-tag Claude Code
+                        span.v2-tag Gemini
+                        span.v2-tag Python
+                        span.v2-tag n8n
+                        span.v2-tag Looker Studio
+                        span.v2-tag Canva
+                        span.v2-tag Letterly
+                        span.v2-tag Descript
+                        span.v2-tag Lovable
+                        span.v2-tag Supabase
 
-            //- Inline translations - works in ALL browsers
-            script.
-              window.commonTranslations = {
+                //- Credentials
+                .v2-section
+                    .v2-section-label(data-i18n='credentialsLabel') Credentials
+
+                    .v2-credential-group
+                        .v2-credential-category(data-i18n='credTech') Technical
+                        .v2-item
+                            .v2-item-title
+                                span.v2-dash —
+                                span Machine Learning DevOps Engineer Nanodegree (Udacity)
+                        .v2-item
+                            .v2-item-title
+                                span.v2-dash —
+                                span Deep Learning Nanodegree (Udacity)
+                        .v2-item
+                            .v2-item-title
+                                span.v2-dash —
+                                span AI for Business Leaders (Udacity)
+                        .v2-item
+                            .v2-item-title
+                                span.v2-dash —
+                                span Multiple courses on DeepLearning.ai platform
+
+                    .v2-credential-group.mt-4
+                        .v2-credential-category(data-i18n='credLeadership') Leadership
+                        .v2-item
+                            .v2-item-title
+                                span.v2-dash —
+                                span Product Manager Academy by nerds.family &amp; Relativity
+                        .v2-item
+                            .v2-item-title
+                                span.v2-dash —
+                                span Startup program during 2024 incubation
+                        .v2-item
+                            .v2-item-title
+                                span.v2-dash —
+                                span Leadership Enrichment &amp; Acceleration Program
+                        .v2-item
+                            .v2-item-title
+                                span.v2-dash —
+                                span AI for Business Leaders
+                        .v2-item
+                            .v2-item-title
+                                span.v2-dash —
+                                span Business Foundations Specialisation &middot; The Wharton School
+
+                //- Connect
+                .v2-section
+                    .v2-section-label(data-i18n='connectLabel') Connect
+                    .v2-social
+                        a.v2-social-link(href='https://linkedin.com/in/alibinkowska' target='_blank')
+                            i.bi.bi-linkedin
+                            span LinkedIn
+                        a.v2-social-link(href='https://x.com/AliBinkowska' target='_blank')
+                            i.bi.bi-twitter
+                            span Twitter / X
+                        a.v2-social-link(href='https://medium.com/@alibinkowska' target='_blank')
+                            i.bi.bi-medium
+                            span Medium
+                        a.v2-social-link(href='https://discord.com/users/MiSky8' target='_blank')
+                            i.bi.bi-discord
+                            span Discord
+
+        include includes/footer.pug
+
+        script.
+            window.commonTranslations = {
                 pl: {
-                  home: "Strona główna",
-                  about: "O mnie",
-                  copyright: "© 2025 Nexi8",
-                  privacyPolicy: "Polityka prywatności"
+                    copyright: "© 2026 Nexi8",
+                    privacyPolicy: "Polityka prywatności"
                 }
-              };
+            };
 
-              window.homeTranslations = {
+            window.homeTranslations = {
                 pl: {
-                  heroBadge: "Startup Builder · Trener AI · HRTech",
-                  heroSubtitle: "Buduję w HRTech | Dzielę się wiedzą o AI",
-                  heroTitle: "Buduję, uczę się, dzielę się",
-                  aboutMeBtn: "O mnie",
-                  nexi8Btn: "Nexi8 (PL)",
-                  howIWorkTitle: "Jak działam",
-                  howIWorkParagraph1: "Buduję rzeczy, które rozwiązują prawdziwe problemy - obecnie w HRTech - jednocześnie dzieląc się tym, czego uczę się o AI poprzez szkolenia i warsztaty.",
-                  howIWorkParagraph2: "Wierzę w zrozumienie zasad zamiast gonienia trendów, w praktyczne wdrożenia zamiast teorii, i w bycie kimś, kto potrafi ocenić, co ma sens w Twojej konkretnej sytuacji.",
-                  howIWorkParagraph3: "Jestem otwarta na współpracę i rozmowy."
+                    heroIntro: "Hej, tu Ali. Witaj na mojej stronie.",
+                    heroPara1: "Na każde \"nie\" jest droga do \"tak\" - nie traktuję ślepych zaułków poważnie. Uwielbiam budować nowe rzeczy, szczególnie gdy technologia jest dźwignią. Jeśli istnieje mądrzejszy sposób na zrobienie czegoś, chcę go znaleźć.",
+                    heroPara2: "Świetnie czuję się zarówno we współpracy, jak i realizując własne cele. Budowałam startupy z dofinansowaniem publicznym - teraz skupiam się na znalezieniu product-market fit dla czegoś, co w pełni należy do mnie.",
+                    rolesLabel: "Role i działania",
+                    role1Title: "Solopreneur | Product Manager",
+                    role1Desc: "Pomagam założycielom i właścicielom firm definiować cele, budować metryki i śledzić to, co ważne - przez sprinty OKR i dashboardy w Looker Studio.",
+                    role2Title: "Okazjonalny AI Engineer",
+                    role2Desc: "Pracuję nad projektami optymalizacyjnymi z naciskiem na OCR, boty i chatboty - budując narzędzia do ekstrakcji, przetwarzania i automatyzacji.",
+                    role3Title: "Trener AI",
+                    role3Desc: "Prowadzę szkolenia AI pomagające zespołom i osobom indywidualnym pracować mądrzej z narzędziami AI.",
+                    role4Title: "Wykładowca gościnny",
+                    role4Desc: "Okazjonalne wykłady gościnne o AI, myśleniu produktowym i budowaniu w nowoczesnym środowisku technologicznym.",
+                    stackLabel: "Stack i narzędzia",
+                    credentialsLabel: "Kwalifikacje",
+                    credTech: "Techniczne",
+                    credLeadership: "Leadership",
+                    connectLabel: "Kontakt",
+                    articlesNav: "Artykuły (wkrótce)"
                 }
-              };
+            };
 
-            //- App logic
-            script(src='js/app.js')
-
-            //- Bootstrap and other scripts
-            include includes/scripts.pug
+        script(src='js/app.js')
+        include includes/scripts.pug

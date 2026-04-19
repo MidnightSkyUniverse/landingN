@@ -19,4 +19,10 @@ if (fs.existsSync('public/robots.txt')) {
     console.log('Copied robots.txt');
 }
 
+// Copy llms.txt
+if (fs.existsSync('src/llms.txt')) {
+    fs.copyFileSync('src/llms.txt', 'dist/llms.txt');
+    console.log('Copied llms.txt');
+}
+
 renderAssets();

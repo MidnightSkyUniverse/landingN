@@ -8,9 +8,6 @@
 @import "global";
 @import "utilities";
 
-// Import Custom Component Styles
-@import "components/feature";
-@import "components/profile";
-
-// Added by myself
+// Import Components
 @import 'components/language-switcher';
+@import 'components/landing';
