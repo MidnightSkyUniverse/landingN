@@ -4,8 +4,8 @@
 
 ## Roles
 
-- Solopreneur and Product Manager at Nexi8 (https://nexi8.pl) - OKR sprints, metrics definition, Data Studio dashboards for founders and business owners
-- Occasional AI Engineer - OCR, bots and chatbot projects in Python
+- Solopreneur and Product Manager at Nexi8 (https://nexi8.pl) - process optimisation, OKR sprints, metrics definition, Data Studio dashboards for founders and business owners
+- Occasional Agentic Engineer - OCR, bots and chatbot projects in Python
 - AI Trainer at PAAI (https://paai.pl/o-nas) - training teams and individuals to work smarter with AI tools
 - Guest Lecturer at WSKZ (https://studia-online.pl/kadra/0/1417/mgr_alina_binkowska) - AI, product thinking, building with modern technology
 
@@ -15,7 +15,7 @@ OKR frameworks, business metrics, data visualization, Data Studio (Google), AI t
 
 ## Tools
 
-Claude Code, Gemini, Python, Data Studio (Google), Canva, Letterly, Descript, Lovable, Supabase, n8n, make,
+Claude Code, Gemini, Python, Data Studio (Google), Canva, Miro, Letterly, Descript, Lovable, Supabase, n8n, make,
 
 ## Credentials
 
