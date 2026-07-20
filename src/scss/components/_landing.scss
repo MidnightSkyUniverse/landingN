@@ -223,9 +223,156 @@ footer.bg-white {
     border-top: 1px solid $landing-border;
 }
 
+// Quote
+.v2-quote {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $primary;
+    margin: 1.25rem 0 2rem;
+    line-height: 1.5;
+}
+
+// Timeline steps
+.v2-timeline {
+    padding-top: 0.5rem;
+}
+
+.v2-step {
+    display: grid;
+    grid-template-columns: 2.25rem 1fr;
+    gap: 1.1rem;
+    position: relative;
+    padding-bottom: 2rem;
+
+    &:not(:last-child)::before {
+        content: '';
+        position: absolute;
+        left: 1.09rem;
+        top: 2.25rem;
+        bottom: 0;
+        width: 1px;
+        background: $landing-border;
+    }
+}
+
+.v2-step-marker {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background: $primary;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.v2-step-body {
+    padding-top: 0.15rem;
+}
+
+.v2-step-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $secondary;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.v2-step-desc {
+    font-size: 1rem;
+    color: $landing-muted;
+    line-height: 1.65;
+    margin: 0 0 0.4rem 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
 @media (max-width: 576px) {
     .v2-wrap {
         padding: 3rem 1.25rem 5rem;
     }
 
+}
+
+// Recruitment task page
+.page-task .v2-name {
+    font-size: clamp(1.6rem, 4vw, 2.25rem);
+}
+
+.page-task .v2-section-label {
+    font-size: 1.1rem;
+    margin-bottom: 1.1rem;
+}
+
+.page-task .v2-step-desc,
+.page-task .v2-item-desc,
+.page-task .v2-dash-item {
+    color: $secondary;
+}
+
+.page-task .v2-section-label,
+.page-task .v2-belief-text,
+.page-task .v2-note,
+.page-task .v2-dash-item,
+.page-task .v2-item-desc,
+.page-task .v2-quote,
+.page-task .v2-step-title,
+.page-task .v2-step-desc {
+    font-size: 1rem;
+}
+
+.v2-note {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: $secondary;
+    margin-bottom: 1rem;
+}
+
+.v2-inline-link {
+    color: $primary;
+    text-decoration: none;
+    border-bottom: 1px solid $primary;
+    padding-bottom: 1px;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.v2-dash-list {
+    margin-top: 0.5rem;
+}
+
+.v2-dash-item {
+    padding-left: 1.35rem;
+    text-indent: -1.35rem;
+    font-size: 1rem;
+    color: $secondary;
+    line-height: 1.65;
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .v2-dash {
+        display: inline-block;
+        width: 1.35rem;
+        text-indent: 0;
+    }
+
+    .v2-tag {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 0.4rem;
+        text-indent: 0;
+    }
 }

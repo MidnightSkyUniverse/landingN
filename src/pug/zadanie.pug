@@ -1,0 +1,137 @@
+doctype html
+html(lang='pl')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='Zadanie rekrutacyjne - Ali Bińkowska')
+        meta(name='robots', content='noindex, nofollow')
+        meta(name='author', content='Ali Bińkowska')
+
+        title Zadanie rekrutacyjne - Ali Bińkowska
+
+        include includes/cookie-banner.pug
+        link(rel='icon', type='image/x-icon', href='assets/favicon.ico?v=2')
+        include includes/css.pug
+
+    body.d-flex.flex-column.h-100
+        main.flex-shrink-0
+
+            include includes/navbar.pug
+
+            .v2-wrap.page-task
+
+                h3.v2-name Zadanie rekrutacyjne
+
+                .v2-section
+                    .v2-section-label Odpowiedź 1
+                    p.v2-note Mamy gotowe Skille, które definiują jak robimy research, jak wyglądają nasze artykuły i jaką wiedzę merytoryczną w nich zawieramy.
+
+                    .v2-dash-list
+                        .v2-dash-item
+                            span.v2-dash —
+                            span deep research źródeł, draft rozdziałów
+                            span.v2-tag Gemini
+                        .v2-dash-item
+                            span.v2-dash —
+                            span weryfikacja źródeł, analiza planu rozdziałów i ewentualna korekta
+                            span.v2-tag Specjalista
+                        .v2-dash-item
+                            span.v2-dash —
+                            span szkic artykułu
+                            span.v2-tag Agent
+                        .v2-dash-item
+                            span.v2-dash —
+                            span weryfikacja merytoryczna
+                            span.v2-tag Specjalista
+                        .v2-dash-item
+                            span.v2-dash —
+                            span peer-review eksperta medycznego przed publikacją
+                            span.v2-tag Ekspert
+                        .v2-dash-item
+                            span.v2-dash —
+                            span ścieżka korekty po publikacji, jeśli błąd zostanie znaleziony
+                            span.v2-tag Specjalista
+
+                .v2-section
+                    .v2-section-label Odpowiedź 2
+                    p.v2-note Chciałabym odpowiedzieć wiedzą, którą zdobyłam niedawno, słuchając #[a.v2-inline-link(href='https://www.youtube.com/watch?v=PplmzlgE0kg' target='_blank' rel='noopener') materiału Cat Wu, Head of Product w Anthropic].
+
+                    .v2-dash-list
+                        .v2-dash-item
+                            span.v2-dash —
+                            span wydawanie nowych funkcji we wczesnym dostępie (research preview)
+                        .v2-dash-item
+                            span.v2-dash —
+                            span szybkie, powtarzalne procesy wdrożeniowe - mniej barier między gotową pracą a wydaniem
+                        .v2-dash-item
+                            span.v2-dash —
+                            span precyzyjne, jasne cele dla każdego zadania
+                        .v2-dash-item
+                            span.v2-dash —
+                            span regularne omawianie metryk i zasad biznesowych - buduje samodzielność zespołu
+                        .v2-dash-item
+                            span.v2-dash —
+                            span misja firmy jako filtr priorytetów - ucinanie dużych, pobocznych projektów
+                        .v2-dash-item
+                            span.v2-dash —
+                            span przestrzeń na szybkie testowanie małych pomysłów (concept corner)
+
+                .v2-section
+                    .v2-section-label Odpowiedź 3
+                    p.v2-note Kupuję dostęp. Dla szefa przygotowuję analizę kosztów - praca bez narzędzia vs praca z narzędziem. Jeśli nie zgodzi się na narzędzie, miesięczną subskrypcję biorę na siebie jako koszt nauki nowego narzędzia.
+
+                .v2-section
+                    .v2-section-label Odpowiedź 4
+
+                    p.v2-quote &ldquo;Give me six hours to chop down a tree and I will spend the first four sharpening the axe.&rdquo;
+
+                    .v2-timeline
+                        .v2-step
+                            .v2-step-marker 1
+                            .v2-step-body
+                                .v2-step-title
+                                    span Przygotowanie promptu badawczego
+                                    span.v2-tag Gemini
+                                p.v2-step-desc Tworzę prompt dla NotebookLM z prośbą o wskazanie autorytetów, sprawdzonych artykułów oraz wywiadów (w tym na YouTube) z ekspertami w danej dziedzinie. Celowo pomijam na tym etapie konkretne pytanie klienta, aby model dał obiektywny obraz całego zagadnienia bez sugerowania się gotową odpowiedzią.
+
+                        .v2-step
+                            .v2-step-marker 2
+                            .v2-step-body
+                                .v2-step-title
+                                    span Głęboki research
+                                    span.v2-tag NotebookLM
+                                p.v2-step-desc Agregacja kluczowych źródeł, publikacji i materiałów wideo zgodnie z wytycznymi z kroku pierwszego. Wybór NotebookLM minimalizuje ryzyko halucynacji, co nie zwalnia mnie z obowiązku weryfikacji źródel i finalnej odpowiedzi.
+
+                        .v2-step
+                            .v2-step-marker 3
+                            .v2-step-body
+                                .v2-step-title
+                                    span Generowanie materiałów pomocniczych
+                                    span.v2-tag NotebookLM
+                                p.v2-step-desc Tworzę infografiki, mapy myśli, podsumowania audio oraz tabele danych. Różne formy tego samego researchu pozwalają na błyskawiczne przyswojenie wiedzy. Notatnik precyzyjnie wskazuje konkretne miejsca w materiałach źródłowych (np. znaczniki czasu w wideo), co skraca czas weryfikacji.
+
+                        .v2-step
+                            .v2-step-marker 4
+                            .v2-step-body
+                                .v2-step-title
+                                    span Aktywna nauka i analiza
+                                    span.v2-tag Ja
+                                p.v2-step-desc Przyswajam wiedzę z wygenerowanych materiałów i przechodzę bezpośrednio do kluczowych fragmentów oryginalnych źródeł wskazanych przez NotebookLM.
+
+                        .v2-step
+                            .v2-step-marker 5
+                            .v2-step-body
+                                .v2-step-title
+                                    span Promptowanie pod kątem klienta
+                                    span.v2-tag NotebookLM
+                                p.v2-step-desc Dopiero po pełnym zrozumieniu tematu ponownie promptuję narzędzie, aby ustrukturyzować i sformułować ostateczną, merytoryczną odpowiedź dla klienta.
+
+        footer.bg-white.py-4.mt-auto
+            .container.px-5
+                .row.align-items-center.justify-content-between.flex-column.flex-sm-row
+                    .col-auto
+                        .small.m-0 Copyright &copy; 2026 Nexi8
+                    .col-auto
+                        a.small(href='privacy.html') Polityka prywatności
+
+        include includes/scripts.pug
