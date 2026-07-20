@@ -150,14 +150,12 @@ html(lang='en')
                             i.bi.bi-discord
                             span Discord
 
-        include includes/footer.pug
-
-        script.
-            window.commonTranslations = {
-                pl: {
-                    copyright: "© 2026 Nexi8",
-                    privacyPolicy: "Polityka prywatności"
-                }
-            };
+        footer.bg-white.py-4.mt-auto
+            .container.px-5
+                .row.align-items-center.justify-content-between.flex-column.flex-sm-row
+                    .col-auto
+                        .small.m-0 Copyright &copy; 2026 Nexi8
+                    .col-auto
+                        a.small(href='privacy.html') Polityka prywatności
 
         include includes/scripts.pug
